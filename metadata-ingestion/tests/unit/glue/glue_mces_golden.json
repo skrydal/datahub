@@ -7,7 +7,7 @@
     "changeType": "UPSERT",
     "aspectName": "containerProperties",
     "aspect": {
-      "value": "{\"customProperties\": {\"platform\": \"glue\", \"instance\": \"PROD\", \"database\": \"flights-database\"}, \"name\": \"flights-database\"}",
+      "value": "{\"customProperties\": {\"platform\": \"glue\", \"instance\": \"PROD\", \"database\": \"flights-database\"}, \"name\": \"flights-database\", \"qualifiedName\": \"arn:aws:glue:us-west-2:123412341234:database/flights-database\"}",
       "contentType": "application/json"
     },
     "systemMetadata": null
@@ -104,7 +104,7 @@
               },
               "externalUrl": null,
               "name": null,
-              "qualifiedName": null,
+              "qualifiedName": "arn:aws:glue:us-west-2:123412341234:table/flights-database/avro",
               "description": null,
               "uri": null,
               "tags": []
@@ -330,7 +330,7 @@
     "changeType": "UPSERT",
     "aspectName": "containerProperties",
     "aspect": {
-      "value": "{\"customProperties\": {\"platform\": \"glue\", \"instance\": \"PROD\", \"database\": \"test-database\"}, \"name\": \"test-database\"}",
+      "value": "{\"customProperties\": {\"platform\": \"glue\", \"instance\": \"PROD\", \"database\": \"test-database\"}, \"name\": \"test-database\", \"qualifiedName\": \"arn:aws:glue:us-west-2:123412341234:database/test-database\"}",
       "contentType": "application/json"
     },
     "systemMetadata": null
@@ -426,7 +426,7 @@
               },
               "externalUrl": null,
               "name": null,
-              "qualifiedName": null,
+              "qualifiedName": "arn:aws:glue:us-west-2:795586375822:table/test-database/test_jsons_markers",
               "description": null,
               "uri": null,
               "tags": []
@@ -649,7 +649,7 @@
               },
               "externalUrl": null,
               "name": null,
-              "qualifiedName": null,
+              "qualifiedName": "arn:aws:glue:us-west-2:795586375822:table/test-database/test_parquet",
               "description": null,
               "uri": null,
               "tags": []
