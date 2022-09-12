@@ -284,7 +284,9 @@ class GlueSource(StatefulIngestionSourceBase):
         self.extract_transforms = config.extract_transforms
         self.env = config.env
 
-    def get_glue_arn(self, account_id: str, database: str, table: Optional[str] = None):
+    def get_glue_arn(
+        self, account_id: str, database: str, table: Optional[str] = None
+    ) -> str:
         prefix = f"arn:aws:glue:{self.source_config.aws_region}:{account_id}"
         if table:
             return f"{prefix}:table/{database}/{table}"
