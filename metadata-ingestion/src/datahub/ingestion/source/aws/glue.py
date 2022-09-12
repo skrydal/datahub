@@ -926,7 +926,9 @@ class GlueSource(StatefulIngestionSourceBase):
             sub_types=["Database"],
             domain_urn=domain_urn,
             description=database.get("Description"),
-            qualified_name=self.get_glue_arn(account_id=database['CatalogId'], database=database['Name'])
+            qualified_name=self.get_glue_arn(
+                account_id=database["CatalogId"], database=database["Name"]
+            ),
         )
 
         for wu in container_workunits:
@@ -1179,8 +1181,11 @@ class GlueSource(StatefulIngestionSourceBase):
                 },
                 uri=table.get("Location"),
                 tags=[],
-                qualifiedName=self.get_glue_arn(account_id=table["CatalogId"], database=table["DatabaseName"],
-                                                table=table["Name"])
+                qualifiedName=self.get_glue_arn(
+                    account_id=table["CatalogId"],
+                    database=table["DatabaseName"],
+                    table=table["Name"],
+                ),
             )
 
         def get_s3_tags() -> Optional[GlobalTagsClass]:
